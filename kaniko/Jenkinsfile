@@ -9,7 +9,7 @@ pipeline {
       steps {
         container('kaniko') {
           sh '''
-          /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --cache=true --destination=index.docker.io/zhan9san/test-kaniko:latest
+          /kaniko/executor -f `pwd`/kaniko/Dockerfile -c `pwd` --cache=true --destination=index.docker.io/zhan9san/test-kaniko:latest
           '''
         }
       }
